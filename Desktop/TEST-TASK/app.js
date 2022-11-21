@@ -7,7 +7,6 @@ import authrouter from './routes/auth.js'
 
 dotenv.config()
 
-
 const app=express();
 
 app.use(bodyParser.json())

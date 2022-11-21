@@ -27,7 +27,7 @@ authrouter.post("/post", async (req, res) => {
         const { Name, Post, Description, Active } = req.body;
         const Photo = req.file
 
-        if (!Name || !Post || !Description) {
+        if (!Name || !Post || !Description ) {
           res.status(400).send({ error: "please fill the fileld proper" })
         } else {
 
