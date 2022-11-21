@@ -1,0 +1,92 @@
+mongo
+mongo -v
+show dbs
+mongo -version
+mongo --version
+db. version()
+db. version()
+show dbs
+show dbs
+db.createCollection
+show dbs
+use new
+show collections
+show dbs
+use local
+db.createCollection(trial)
+db.createCollection
+show dbs
+use local
+show collections
+db.trial.insertOne({"name":"markand","num":1234})
+use local
+show collections
+db.find.trial.pretty()
+db.find.trial
+db.trial.find().pretty()
+show dbs
+use local
+db.createCollection("practice")
+use local
+show collections
+use practice
+db.practice.insert({"name":"aman","address":"indore","number":1234})
+db.practice.Many({"name":"aman","address":"indore"},{"name":"raj","address":"bhopal","number":90120909})
+db.practice.find().pretty()
+db.practice.insertMany({"name":"aman","address":"indore"},{"name":"raj","address":"bhopal","number":90120909})
+db.practice.find().pretty()
+db.practice.insertMany([{"name":"aman","address":"indore"},{"name":"raj","address":"bhopal","number":90120909}])
+db.practice.find().pretty()
+db.practice.insertMany([{"eno":1,"enm":"raj","phone":12331},{"eno":2,"enm":"rahul","phone":797778},{"eno":3,"enm":"pankaj","phone":80808}])
+db.practice.find().pretty()
+db.practice.save({"eno":3})
+db.practice.find().pretty()
+db.practice.save({"eno":4,"enm"})
+db.practice.save({"eno":4,"enm":"abc"})
+db.practice.find().pretty()
+db.practice.remove({"eno":4})
+db.practice.find().pretty()
+db.practice.remove({"eno":2})
+db.practice.find().pretty()
+db.practice.remove
+db.practice.find().pretty()
+db.practice.remove({"name":"aman"})
+db.practice.find().pretty()
+db.practice.remove({"name":"raj"})
+db.practice.find().pretty()
+db.practice.findAndModify()
+db.practice.findAndModify
+db.practice.update()
+db.practice.update
+db.practice.find().limit(1)
+db.practice.find().limit(2)
+db.practice.find().limit(4)
+db.practice.find().limit(8)
+db.practice.find().sort({KEY:1})
+db.practice.find().sort({KEY:0})
+db.practice.updateOne()
+db.practice.updateOne({"eno":1})
+db.practice.find()
+db.practice.updateOne({"eno":1,"enm":"raj","phone":2112})
+db.practice.find()
+db.practice.updateMany({"age":{$lt:18}},{$set:{status:"reject"}})
+db.practice.find()
+show dbs
+use studentapi
+show colloctions
+show collections
+db.students.find().pretty()
+db.user.insert( [     { user_id: 1, fname: "D", lname: "Lei", email: "d@m.edu" },     { user_id: 2, fname: "R", lname: "Wick", email: "rn@m.edu" },     { user_id: 3, fname: "B", lname: "Elfs", email: "bs@m.edu" },     { user_id: 4, fname: "A", lname: "Losh", email: "a@me.edu" },     { user_id: 5, fname: "T", lname: "Ph", email: "p_thi@m.edu" }  ] )
+;
+db.user.insert( [     { user_id: 1, fname: "D", lname: "Lei", email: "d@m.edu" },     { user_id: 2, fname: "R", lname: "Wick", email: "rn@m.edu" },     { user_id: 3, fname: "B", lname: "Elfs", email: "bs@m.edu" },     { user_id: 4, fname: "A", lname: "Losh", email: "a@me.edu" },     { user_id: 5, fname: "T", lname: "Ph", email: "p_thi@m.edu" }  ] )
+clr
+clear
+show dbs
+use lookup
+db.user.insert( [     { user_id: 1, fname: "D", lname: "Lei", email: "d@m.edu" },     { user_id: 2, fname: "R", lname: "Wick", email: "rn@m.edu" },     { user_id: 3, fname: "B", lname: "Elfs", email: "bs@m.edu" },     { user_id: 4, fname: "A", lname: "Losh", email: "a@me.edu" },     { user_id: 5, fname: "T", lname: "Ph", email: "p_thi@m.edu" }  ] )
+show dbs
+use lookup
+;
+db.data.insertMany(    [        {            "name": "Bob",            "blk_no": 22,            "street" : "dewey street",            "city" : "United States of America"        },        {            "name": "Jack",            "blk_no": 25,            "street" : "gordon street",            "city" : "New Zealand"        }    ] );
+db.user.insertMany(    [        {            "contact_name": "Bob",            "age": 27,            "sex" : "male",            "citizenship" : "Filipino"        },        {            "contact_name": "Jack",            "age": 22,            "sex" : "male",            "citizenship" : "Filipino"        }    ] );
+db.user.aggregate([    { $lookup:        {           from: "data",           localField: "contact_name",           foreignField: "name",           as: "address"        }    } ]).pretty();
